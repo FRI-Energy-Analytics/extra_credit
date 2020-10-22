@@ -1,0 +1,11 @@
+##https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    arr = map(int, raw_input().split())
+    max = max(arr)
+    max2 = min(arr)
+    for i in range(n):
+        if arr[i] != max and arr[i] > max2:
+            max2 = arr[i]
+    print max2
