@@ -1,0 +1,29 @@
+#https://www.hackerrank.com/challenges/the-minion-game/problem
+
+def minion_game(string):
+    # your code goes here
+    word = list(string)
+    vowels = ['A','E','I','O','U']
+    length = len(word)
+    Kevin = 0
+    Stuart = 0
+    
+    for i, l in enumerate(word):
+        if l in vowels:
+            Kevin += length - i
+        else:
+            Stuart += length - i
+            
+    if Stuart > Kevin:
+        print ('Stuart', Stuart)
+    elif Kevin > Stuart:
+        print ('Kevin', Kevin)
+    else:
+        print ('Draw')
+            
+
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
