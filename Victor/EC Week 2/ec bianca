@@ -1,0 +1,7 @@
+https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    second_array=set(arr)
+    second_array.remove(max(second_array))
+    print(max(second_array))
